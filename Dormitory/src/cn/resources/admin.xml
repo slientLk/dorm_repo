@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="adminAction" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="cn.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="myInterceptorStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="myInterceptorStack"></default-interceptor-ref>
+	
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result name="login">/index.jsp</result>
+		</global-results>
+		<action name="admin" class="cn.action.AdminAction" method="select">
+			<result name="success">/view/admin.jsp</result>
+		</action>
+		<action name="current2" class="cn.action.AdminAction" method="current2">
+			<result name="success">/view/admin_update.jsp</result>
+		</action>
+		<action name="update2" class="cn.action.AdminAction" method="update2">
+			<result name="success" type="chain">admin</result>
+		</action>
+		<action name="add2" class="cn.action.AdminAction" method="add2">
+			<result name="success" type="chain">admin</result>
+		</action>
+		<action name="delete2" class="cn.action.AdminAction" method="delete2">
+			<result name="success" type="chain">admin</result>
+		</action>
+		<action name="query2" class="cn.action.AdminAction" method="query2">
+			<result name="success">/view/admin.jsp</result>
+		</action>
+	</package>
+</struts>

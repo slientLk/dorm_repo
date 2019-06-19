@@ -1,0 +1,29 @@
+body {
+	background: none;
+	color: #333;
+}
+
+.sex {
+	width: 50px;
+	height: 40px;
+	display: inline-block;
+}
+
+.user-sex {
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: -12px;
+}
+
+.card {
+	width: 50px;
+	height: 40px;
+	display: inline-block;
+}
+
+.user-card {
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: -12px;
+}
+

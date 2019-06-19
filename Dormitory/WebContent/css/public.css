@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: Î¢ÈíÑÅºÚ;
+}
+
+a {
+	text-decoration: none;
+}
+
+#title {
+	height: 28px;
+	background-color: #E1E1E1;
+	padding-left: 10px;
+	line-height: 28px;
+}
+
+#main_icon {
+	float: left;
+	margin-top: 4px;
+}
+
+#t2 tr th {
+	background: #2dc3e8;
+	border: 1px #FFFFFF solid;
+}
+
+#t2 tr td {
+	text-align: center;
+	border: 1px #FFFFFF solid;
+}
+
+#t2 a {
+	color: #FFFFFF;
+}
+
+#select {
+	position: relative;
+	top: 2px;
+}
